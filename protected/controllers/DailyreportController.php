@@ -75,19 +75,21 @@ class DailyreportController extends Controller
 	{
 		
 		$crt= New CDbCriteria();
-		$crt->select =  '*, SEC_TO_TIME(SUM(TIME_TO_SEC(duration))) AS total ';
+		$crt->select =  '*';
 		$crt->condition = 'dailyreport_id = :id';
+		
 		$crt->group = 'dailyreport_id';
 		//$criteria->order = 'priority_id DESC, max_added_on DESC';
 		$crt->params = array('id' => $id);
-		$total=Detilreport::model()->find($crt);
+		//$total=Detilreport::model()->findAll($crt);
 
 		$model2= New Detilreport;
 
+				
 		$this->render('viewstaff',array(
 			'model'=>$this->loadModel($id),
 			'model2'=>$model2,
-			'total_duration'=>$total['total'],
+			'total'=>$model2->getTotalDuration($id),
 		));
 	}
 
@@ -248,6 +250,7 @@ class DailyreportController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
+
 	public function actionIndexStaff()
 	{
 		//$dataProvider=new CActiveDataProvider('Dailyreport');
@@ -272,6 +275,7 @@ class DailyreportController extends Controller
 	/**
 	 * Manages all models.
 	 */
+
 	public function actionAdmin()
 	{
 		$model=new Dailyreport('search');
@@ -328,6 +332,7 @@ class DailyreportController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
+
 	public function actionDetilreport()
 	{
     	$user_id= yii::app()->user->id;
@@ -343,16 +348,14 @@ class DailyreportController extends Controller
     	else {
 	    	$NewDetil=new Detilreport;
 	    	$model2= New Detilreport;
-	    	$dailyreport_id= $_REQUEST['detil_id'];
+	    	$dailyreport_id= $_REQUEST['dailyreport_id'];
 
 	    	$crt= New CDbCriteria();
-			$crt->select =  '*, SEC_TO_TIME(SUM(TIME_TO_SEC(duration))) AS total ';
+			$crt->select =  '* ';
 			$crt->condition = 'dailyreport_id = :id';
 			$crt->group = 'dailyreport_id';
 			//$criteria->order = 'priority_id DESC, max_added_on DESC';
-			$crt->params = array('id' => $_REQUEST['detil_id']);
-			$total=Detilreport::model()->find($crt);
-	    
+			$crt->params = array('id' => $_REQUEST['dailyreport_id']);	    
 
 			if(isset($_POST['Detilreport']))
 			{
@@ -374,7 +377,7 @@ class DailyreportController extends Controller
 		    	'detil'=>$NewDetil, 
 		    	'dailyreport_id'=>$dailyreport_id, 
 		    	'model2'=>$model2, 
-		    	'total_duration'=>$total['total'],
+		    	'total_duration'=>$model2->getTotalDuration($dailyreport_id),
 		    ));
 		}
 	}
@@ -385,12 +388,12 @@ class DailyreportController extends Controller
 		$detil=Detilreport::model()->findByAttributes(array('id'=>$id));
 		
 		$crt= New CDbCriteria();
-		$crt->select =  '*, SEC_TO_TIME(SUM(TIME_TO_SEC(duration))) AS total ';
+		$crt->select =  '*';
 		$crt->condition = 'dailyreport_id = :id';
 		$crt->group = 'dailyreport_id';
 		//$criteria->order = 'priority_id DESC, max_added_on DESC';
 		$crt->params = array('id' => $dailyreport_id);
-		$total=Detilreport::model()->find($crt);
+		$total_duration=$model2->getTotalDuration($dailyreport_id);
 
 
 
@@ -409,7 +412,7 @@ class DailyreportController extends Controller
 	    	'dailyreport_id'=>$dailyreport_id, 
 	    	'detil_id'=>$dailyreport_id,
 	    	'model2'=> $model2, 
-	    	'total_duration'=>$total->total,
+	    	'total_duration'=>$model2->getTotalDuration($dailyreport_id),
 
 		));
 	}
@@ -426,7 +429,7 @@ class DailyreportController extends Controller
 		//$test->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser		
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('detilreport', 'detil_id'=>$_REQUEST[detil_id]));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('detilreport', 'dailyreport_id'=>$_REQUEST[dailyreport_id]));
 	}
 
 	/**

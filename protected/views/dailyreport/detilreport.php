@@ -46,7 +46,7 @@ $form = $this->beginWidget(
 
 	<div class="row">
 		<?php echo $form->labelEx($detil,'dailyreport_id'); ?>
-		<?php echo $form->textField($detil,'dailyreport_id', array('value'=>$_REQUEST['detil_id'], 'readOnly'=>true)); ?>
+		<?php echo $form->textField($detil,'dailyreport_id', array('value'=>$_REQUEST['dailyreport_id'], 'readOnly'=>true)); ?>
 		
 		<?php echo $form->error($detil,'dailyreport_id'); ?>
 	</div>
@@ -105,7 +105,7 @@ $form = $this->beginWidget(
 		<?php 
 			if (!isset($_REQUEST['update'])) 
 			{ 
-					echo CHtml::Button('Back', array('submit'=>array('dailyreport/viewstaff/', 'id'=>$_REQUEST['detil_id']))); 
+					echo CHtml::Button('Back', array('submit'=>array('dailyreport/viewstaff/', 'id'=>$_REQUEST['dailyreport_id']))); 
 			}
 		?>
 	</div>
@@ -122,7 +122,7 @@ $this->widget('booster.widgets.TbGridView', array(
 	'id'=>'detil-grid',
 	'type'=>'striped',
 	'responsiveTable'=>true,
-	'dataProvider'=>$model2->getSummeryDetil($_REQUEST['detil_id']),
+	'dataProvider'=>$model2->getSummeryDetil($_REQUEST['dailyreport_id']),
 	'summaryText'=>'',	
 	
 	'columns'=>array(
@@ -137,22 +137,32 @@ $this->widget('booster.widgets.TbGridView', array(
 		'id',
 		'dailyreport_id',
 		'listjob',
-		//'describejob',		
-		'duration',		
+		//'describejob',
+		array(
+            'name'=>'describejob',			
+			'value'=>function($data){
+               return '<textarea rows="3" cols="50">'.$data['describejob'].'</textarea>';
+            },                        		
+			'type'=>'raw',
+            ),    		
+		//'duration',	
+		array(
+                'name'=>'duration',
+                'type'=>'raw',
+				'value'=>$model2->duration,
+                'footer'=>"<blink>Total Duration :</blink> <br>".$model2->getTotalDuration($_REQUEST['dailyreport_id']),
+				'footerHtmlOptions' => array('class'=>'grid-footer'),
+        ),	
 		array(
 			'class'=>'booster.widgets.TbButtonColumn',//'class'=>'CButtonColumn',
 			'htmlOptions'=> array('class'=>'col-sm-1 col-md-3px col-lg-6px'),
-			'buttons'=>array(
-	            /*'view' => array(
-	                'label'=>'view',
-	                'url'=>'Yii::app()->createUrl("/dailyreport/viewstaff", array("id"=>$data->id))',
-                    //'imageUrl'=>Yii::app()->request->baseUrl.'/images/icons/password.png',
-	            ),*/
+			'buttons'=>array(	           
 	            'update' => array(
 	                'label'=>'Update',
-	                'url'=>'Yii::app()->createUrl("/dailyreport/updatedetil", array("id"=>$data[id], "dailyreport_id"=>$data[dailyreport_id], "update"=>1))',
-                    //'imageUrl'=>Yii::app()->request->baseUrl.'/images/icons/password.png',
-                    //'icon'=>'fa fa-facebook',
+	                'url'=>function($data){
+						return Yii::app()->createUrl("/dailyreport/updatedetil", array("id"=>$data['id'], "dailyreport_id"=>$data['dailyreport_id'], "update"=>1));
+					},
+                    
                     'options'=>array(			        		
 			        		'class'=>'btn btn-small btn-warning',
 			        		'style'=>'margin:1px; padding:5px',
@@ -160,16 +170,18 @@ $this->widget('booster.widgets.TbGridView', array(
 	            ),
 	            'delete' => array(
 	            	'label'=>'Delete',
-	            	'url'=>'Yii::app()->createUrl("/dailyreport/deletedetil", array("id"=>$data[id], "detil_id"=>$data[dailyreport_id]))', 
-	            	'options'=>array(			        		
+	            	'url'=>function($data){
+						return Yii::app()->createUrl("/dailyreport/deletedetil", array("id"=>$data['id'], "dailyreport_id"=>$data['dailyreport_id'])); 
+					},	            	
+					'options'=>array(			        		
 			        		'class'=>'btn btn-small btn-danger',
 			        		'style'=>'margin:1px; padding:5px',
 			        )
 	            )
             ),
-            'template'=>'{update}{delete}'
+            'template'=>'{update} {delete}'
 		),
 	),
 )); 
-echo "Total Duration : ".$total_duration;
+echo "<blink>Total Duration : ".$total_duration."</blink>";
 ?> 

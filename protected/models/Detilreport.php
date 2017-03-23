@@ -38,7 +38,7 @@ class Detilreport extends CActiveRecord
 			//array('duration', 'time', 'format'=>'H:m:s'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, dailyreport_id, listjob, describejob', 'safe', 'on'=>'search'),
+			array('id, dailyreport_id, listjob, describejob, total', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,7 +62,7 @@ class Detilreport extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'dailyreport_id' => 'Code report',
-			'listjob' => 'List Job/ Pekerjaan',
+			'listjob' => 'List Job',
 			'describejob' => 'Keterangan, max 500 character',
 			'duration' => 'Duration (H:m:s)',
 		);
@@ -120,6 +120,14 @@ class Detilreport extends CActiveRecord
 		// return data provider
 		return $dataProvider;
 	} 
+	public function getTotalDuration($dailyreport_id)
+	{
+		$sql= "SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(duration))) AS total
+			FROM dailyactivity.detilreport 
+			WHERE dailyreport_id = '$dailyreport_id'";
+		$detil = Yii::app()->db->createCommand($sql)->queryScalar();
+		return $detil;
+	}
 
 	protected function beforeValidate() 
 	{

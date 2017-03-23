@@ -1,3 +1,29 @@
+<style>
+.blink_text {
+  animation:1s blinker linear infinite;
+  -webkit-animation:1s blinker linear infinite;
+  -moz-animation:1s blinker linear infinite;
+
+  color: red;
+}
+@-moz-keyframes blinker {  
+ 0% { opacity: 1.0; }
+ 50% { opacity: 0.0; }
+ 100% { opacity: 1.0; }
+ }
+
+@-webkit-keyframes blinker {  
+ 0% { opacity: 1.0; }
+ 50% { opacity: 0.0; }
+ 100% { opacity: 1.0; }
+ }
+
+@keyframes blinker {  
+ 0% { opacity: 1.0; }
+ 50% { opacity: 0.0; }
+ 100% { opacity: 1.0; }
+}
+</style>
 <?php
 
 /* @var $this DailyreportController */
@@ -14,7 +40,7 @@ $this->menu=array(
 	array('label'=>'Update Dailyreport', 'url'=>array('updatestaff', 'id'=>$model->id)),
 	array('label'=>'Delete Dailyreport', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Dailyreport', 'url'=>array('adminstaff')),
-	array('label'=>'Add Detil Dailyreport (Menambah Detil Report)', 'url'=>array('dailyreport/detilreport', 'detil_id'=>$model->id)),
+	array('label'=>'Add Detil Dailyreport (Menambah Detil Report)', 'url'=>array('dailyreport/detilreport', 'dailyreport_id'=>$model->id)),
 );
 ?>
 
@@ -31,16 +57,12 @@ $this->menu=array(
 )); ?>
 
 <?php 
-$this->widget('zii.widgets.grid.CGridView', array(
-
-
-//$this->widget('booster.widgets.TbExtendedGridView', array(
-//$this->widget('booster.widgets.TbGridView', array(
+//$this->widget('zii.widgets.grid.CGridView', array(
+$this->widget('booster.widgets.TbExtendedGridView', array(
 	//'type' => 'striped', //'itemsCssClass'=>'table table-hover table-striped table-bordered table-condensed',
-	'id'=>'detil-grid',	
-	'dataProvider'=>$model2->getSummeryDetil($model->id),//'dataProvider'=>$model2->getSummeryDetil($_REQUEST['detil_id']),
-	//'summaryText'=>'',
-	
+	//'id'=>'detil-grid',	
+	'dataProvider'=>$model2->getSummeryDetil($model->id),//'dataProvider'=>$model2->getSummeryDetil($_REQUEST['detil_id']),	
+	//'filter'=>false,
 	'columns'=>array(
 
             array(
@@ -51,33 +73,39 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			
             'id',
             'dailyreport_id',
-            'listjob',
-            'describejob',
-            //array(
-            //	'header'=>'Describe',
-            //	'value'=>'CHtml::textArea("describejob", $data[describejob])',
-
-            //),
+            'listjob',            
             array(
-            'name'=>'result_severnity',
-            'type' => 'raw',
-            'value'=> '$data[listjob]',
+            'name'=>'describejob',			
+			'value'=>function($data){
+               return '<textarea rows="4" cols="50">'.$data['describejob'].'</textarea>';
+            },                        		
+			'type'=>'raw',
+            ),           
+			array(
+                'name'=>'duration',
+                'type'=>'raw',
+				'value'=>$model2->duration,
+                'footer'=>"Total Duration : <br>".$model2->getTotalDuration($model->id),
+				'footerHtmlOptions' => array('class'=>'grid-footer'),
             ),
-
-
-            'duration',
-            /*array(
+			/*
+            array(
                 'htmlOptions' => array('nowrap' => 'nowrap'),
                 'class' => 'booster.widgets.TbButtonColumn',
                 'viewButtonUrl' => null,
                 'updateButtonUrl' => null,
                 'deleteButtonUrl' => null,
-            ),
-            */
+            ),*/			
             array(
                 'class'=>'booster.widgets.TbButtonColumn',//'class'=>'CButtonColumn',
                 'htmlOptions'=> array('class'=>'col-sm-1'),
-                'template'=>'{update}{delete}',
+				'viewButtonUrl' => null,
+                'updateButtonUrl' =>function($data){ 
+					return Yii::app()->createUrl("/dailyreport/updatedetil", array("id"=>$data['id'], "dailyreport_id"=>$data['dailyreport_id'], "update"=>1));
+				},
+                'deleteButtonUrl' => null,
+                //'template'=>'{update}{delete}',
+			/*
                 'buttons'=>array(					
                     'htmlOptions' => array('nowrap'=>'nowrap'),
                     'update' => array(
@@ -96,10 +124,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
                             'style'=>'margin:1px; padding:5px',
                         )
                     )			
-                ),            
+                ),*/            
             ),
 	),
 )); 
-   
-echo "Total Duration : ".$total_duration;
+
+echo "<span class='blink_text'>Total Duration : ".$total."</sapan>";//$total_duration;
 ?> 
