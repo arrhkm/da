@@ -99,32 +99,15 @@ $this->widget('booster.widgets.TbExtendedGridView', array(
             array(
                 'class'=>'booster.widgets.TbButtonColumn',//'class'=>'CButtonColumn',
                 'htmlOptions'=> array('class'=>'col-sm-1'),
-				'viewButtonUrl' => null,
+                'viewButtonUrl' => null,
                 'updateButtonUrl' =>function($data){ 
-					return Yii::app()->createUrl("/dailyreport/updatedetil", array("id"=>$data['id'], "dailyreport_id"=>$data['dailyreport_id'], "update"=>1));
-				},
-                'deleteButtonUrl' => null,
+                    return Yii::app()->createUrl("/dailyreport/updatedetil", array("id"=>$data['id'], "dailyreport_id"=>$data['dailyreport_id'], "update"=>1));
+                },
+                'deleteButtonUrl' => function($data){
+                    return Yii::app()->createUrl("/dailyreport/updatedetil", array("id"=>$data['id'], "dailyreport_id"=>$data['dailyreport_id']));
+                },
                 //'template'=>'{update}{delete}',
-			/*
-                'buttons'=>array(					
-                    'htmlOptions' => array('nowrap'=>'nowrap'),
-                    'update' => array(
-                        'label'=>'Update',
-                        'url'=>'Yii::app()->createUrl("/dailyreport/updatedetil", array("id"=>$data[id], "dailyreport_id"=>$data[dailyreport_id], "update"=>1))',	                    
-                        'options'=>array(
-                            'class'=>'btn btn-small btn-warning',
-                            'style'=>'margin:1px; padding:5px',
-                        )
-                    ),
-                    'delete' => array(
-                        'label'=>'Delete',
-                        'url'=>'Yii::app()->createUrl("/dailyreport/deletedetil", array("id"=>$data[id], "detil_id"=>$data[dailyreport_id]))', 
-                        'options'=>array(
-                            'class'=>'btn btn-small btn-danger',
-                            'style'=>'margin:1px; padding:5px',
-                        )
-                    )			
-                ),*/            
+		          
             ),
 	),
 )); 

@@ -1,5 +1,5 @@
 <?php 
-Class Formjobtitle extends CFormModel()
+Class Formjobtitle extends CFormModel
 {
 	//variable fields
 	public $id;
@@ -20,7 +20,7 @@ Class Formjobtitle extends CFormModel()
 			array('id'=>'Id'),
 			array('departement_id'=> 'Departement'),
 			array('name'=>'Name Jobtitle'),
-			);
+			
 		);
 	}
 

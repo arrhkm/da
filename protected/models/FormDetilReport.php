@@ -1,5 +1,5 @@
 <?php 
-Class FormDetilReport extends CFormModel()
+Class FormDetilReport extends CFormModel
 {
 	//variable fields
 	public $dailyreport_id;
@@ -20,7 +20,7 @@ Class FormDetilReport extends CFormModel()
 			array('dailyreport_id'=>'Daily report Id'),
 			array('listjob'=> 'List Job'),
 			array('describejob'=>'Desribe'),
-			);
+			
 		);
 	}
 

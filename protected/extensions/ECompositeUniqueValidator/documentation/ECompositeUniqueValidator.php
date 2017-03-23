@@ -2,7 +2,7 @@
 /**
  * Tags
  */
-unique, composite, unique key, composite unique key, validator, unique validator
+//unique, composite, unique key, composite unique key, validator, unique validator
 
 /**
  * Name
@@ -12,26 +12,27 @@ composite-unique-validator
 /**
  * Short Summary
  */
-Validates that the combination of several attributes values (composite key) is unique in the given database table.
+//Validates that the combination of several attributes values (composite key) is unique in the given database table.
 
 /**
  * Description
  */
-ECompositeUniqueValidator validates that the combined values of the given attributes (composite key) is unique in the corresponding database table. 
+//ECompositeUniqueValidator validates that the combined values of the given attributes (composite key) is unique in the corresponding database table. 
 
-It is a modification of the build in _CUniqueValidator_. All properties and methods of the _CUniqueValidator_ should also work with this validator.
+//It is a modification of the build in _CUniqueValidator_. All properties and methods of the _CUniqueValidator_ should also work with this validator.
 
 ##Requirements
-Tested with Yii 1.1.9, should work with Yii 1.1 or above
+//Tested with Yii 1.1.9, should work with Yii 1.1 or above
 
 ##Usage
 
 #### Files
-Extract the zip file.<br>
+/*Extract the zip file.<br>
 Put everything under `ECompositeUniqueValidator/components` into your `protected/components` folder.<br>
 Put everything under `ECompositeUniqueValidator/extensions` into your `protected/extensions` folder.<br>
 Make sure that the extension is imported in your config file `protected/config/main.php`:
-~~~
+~~~*/
+/*
 [php]
 'import'=>array(
 	...
@@ -39,11 +40,12 @@ Make sure that the extension is imported in your config file `protected/config/m
 	// 'ext.*', // <---- this works too
 ),
 ~~~
-
+*/
 
 
 ####Example 1 (Basic)
-In your model file:
+/*
+ * In your model file:
 ~~~
 [php]
 public function rules()
@@ -111,3 +113,7 @@ therefore all listed attributes are validated together.
 
 * [composite-unique-key-validatable](http://www.yiiframework.com/extension/composite-unique-key-validatable "composite-unique-key-validatable"): An extension, that also validates composite unique keys of AR-models, implemented as a behaviour. 
 * [unique-attributes-validator](http://www.yiiframework.com/extension/unique-attributes-validator "unique-attributes-validator"): Another extension that validates unique constraints with more then one attribute.
+ 
+ * 
+ */
+ ?>

@@ -69,26 +69,28 @@ $this->widget(
 	    'enablePagination' => true,
 	    'columns' => array(
 	    	'id',
-			//'jobtitle_id',
-			'name',
-			//'password',
-			//'level',
-			'email',    	
-	    	array(
-	    		'htmlOptions' => array('nowrap'=>'nowrap'),
-				'class'=>'booster.widgets.TbButtonColumn',
-				'template'=>'{view}{update}{delete}',
-				'buttons'=>array(					
-					'htmlOptions' => array('nowrap'=>'nowrap'),
-					'update' => array(
-		                'label'=>'Update',
-		                'url'=>'Yii::app()->createUrl("/employee/update", array("id"=>$data[id]))',	                    
-			        ),
-		            'delete' => array(
-		            	'label'=>'Delete',
-		            	'url'=>'Yii::app()->createUrl("/employee/delete", array("id"=>$data[id]))', 
-		            )			
-           		),      	
+                //'jobtitle_id',
+                'name',
+                //'password',
+                //'level',
+                'email',    	
+	    	array(                    
+                    'class'=>'booster.widgets.TbButtonColumn',
+                    'htmlOptions' => array('nowrap'=>'nowrap'),
+                    'template'=>'{view} {update} {delete}',
+                    'buttons'=>array(					
+                        'htmlOptions' => array('nowrap'=>'nowrap'),
+                        'update' => array(
+                            'label'=>'Update',                            	
+                            'url'=>function($data){
+                                return Yii::app()->createUrl('/employee/update', array('id'=>$data['id']));
+                            },
+                        ),
+                        /*'delete' => array(
+                            'label'=>'Delete',
+                            'url'=>'Yii::app()->createUrl("/employee/delete", array("id"=>$data[id]))', 
+                        )*/			
+                    ),      	
 	    	),
 	    ),
     )

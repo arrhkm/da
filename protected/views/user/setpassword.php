@@ -30,4 +30,7 @@
   </div>
   <?php $this->endWidget(); ?>
 </div>
-<?php echo $msg;?>
+<?php if (isset($msg)){
+    echo $msg;
+}
+?>
