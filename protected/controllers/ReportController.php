@@ -25,7 +25,7 @@ class ReportController extends Controller
 		return array(			
 			
 			array('allow',
-				'actions'=>array('admin', 'delete', 'index', 'view', 'create', 'update', 'createReportAll'),
+				'actions'=>array('admin', 'delete', 'index', 'view', 'create', 'update', 'rptall', 'createreportall', 'createExcelAll'),
 				'expression'=>'$user->isAdmin()',
 			),
 			array('allow',
@@ -42,7 +42,9 @@ class ReportController extends Controller
 	{
 		$this->render('index');
 	}
+	
 
+	/*
 	public function actionCreateReport()
 	{
 		$model= New ReportForm;
@@ -50,23 +52,39 @@ class ReportController extends Controller
 		{
 			$model->attributes= $_POST['ReportForm'];
 			//$this->render('createexcel', array('model'=>$model));
-			$this->createExcel($model->date_start, $model->date_end);
-		}
-
-		$this->render('createreport', array ('model'=>$model));
-	}
-
-	public function actionCreateReportAll()
-	{
-		$model= New ReportForm;
-		if (isset($_POST['ReportForm']))
-		{
-			$model->attributes= $_POST['ReportForm'];
-			//$this->render('createexcel', array('model'=>$model));
+			//$this->createExcel($model->date_start, $model->date_end);
 			$this->createExcelAll($model->date_start, $model->date_end);
 		}
 
 		$this->render('createreport', array ('model'=>$model));
+	}*/
+
+	public function actionRptall()
+	{
+		$model= New ReportForm;
+		
+		if (isset($_POST['ReportForm']))
+		{
+			$model->attributes= $_POST['ReportForm'];
+			$this->createexcelall($model->date_start, $model->date_end);
+			//$this->createExcelAll($model->date_start, $model->date_end);
+			//$this->render('createreportall', array('model'=>$model));
+		}
+
+		
+		$this->render('rptall', array('model'=>$model));
+	}
+	public function actionCreatereportall(){
+		$model= New ReportForm;
+		
+		if (isset($_POST['ReportForm']))
+		{
+			$model->attributes= $_POST['ReportForm'];
+			$this->createexcelall($model->date_start, $model->date_end);
+			//$this->createExcelAll($model->date_start, $model->date_end);
+			//$this->render('createreportall', array('model'=>$model));
+		}
+		$this->render('createreport', array('model'=>$model));
 	}
 
 	public function createExcel($date_start, $date_end)
@@ -103,13 +121,6 @@ class ReportController extends Controller
 		//$data = $this->loadModel($_REQUEST[id]);
 		$connect1 = Yii::app()->db;
 		
-		/*$sqlDetil2="
-			SELECT c.id, c.name, a.id as kd_report, a.date_report, SEC_TO_TIME(SUM(TIME_TO_SEC(duration))) as total_durasi
-			FROM dailyreport a JOIN detilreport b ON(b.dailyreport_id= a.id) 
-			RIGHT JOIN employee c ON(a.employee_id= c.id) AND a.date_report= '$_REQUEST[date_report]'
-			WHERE c.id!='admin'						
-			GROUP BY c.id
-		";*/
 		$sqlDetil= "
 			SELECT a.id, a.name, e.name as departement, g.name as job ,b.date_report, c.listjob, c.describejob, c.duration
 			FROM employee as a, dailyreport as b, detilreport as c, workin as d, departement as e, group_jobtitle as f, jobtitle as g
@@ -134,14 +145,14 @@ class ReportController extends Controller
 		foreach ($dataDetil as $key=>$row)
 		{
 
-			$id= $row[id];
-			$name = $row[name]; 
-			$dep= $row[departement];
-			$job= $row[job];
-			$date_report= $row[date_report];
-			$listjob=$row[listjob];
-			$describejob=$row[describejob];
-			$duration=$row[duration];
+			$id= $row['id'];
+			$name = $row['name']; 
+			$dep= $row['departement'];
+			$job= $row['job'];
+			$date_report= $row['date_report'];
+			$listjob=$row['listjob'];
+			$describejob=$row['describejob'];
+			$duration=$row['duration'];
 			
 
 			$rows = array(
@@ -199,29 +210,22 @@ class ReportController extends Controller
 		 
 		// Add some data
 		$objPHPExcel->setActiveSheetIndex(0)
-					->setCellValue('A1', 'id')
-		            ->setCellValue('B1', 'Name')
+					->setCellValue('A1', 'Employee ID')
+		            ->setCellValue('B1', 'Employee Name')
 		            ->setCellValue('C1', 'Departement')
 		            ->setCellValue('D1', 'Jabatan')
-		            ->setCellValue('E1', 'Date Report')
-		            ->setCellValue('F1', 'List Job')
-		            ->setCellValue('G1', 'Describe Job')
-		            ->setCellValue('H1', 'Duration');
+		            ->setCellValue('E1', 'Date Report');
+		            //->setCellValue('F1', 'List Job')
+		            //->setCellValue('G1', 'Describe Job')
+		            //->setCellValue('H1', 'Duration');
 		            
 		 
 		// Miscellaneous glyphs, UTF-8
 		
 		//$data = $this->loadModel($_REQUEST[id]);
-		$connect1 = Yii::app()->db;
+		$connect1 = Yii::app()->db;		
 		
-		$sqlDetil2="
-			SELECT c.id, c.name, a.id as kd_report, a.date_report, SEC_TO_TIME(SUM(TIME_TO_SEC(duration))) as total_durasi
-			FROM dailyreport a JOIN detilreport b ON(b.dailyreport_id= a.id) 
-			RIGHT JOIN employee c ON(a.employee_id= c.id) AND a.date_report= '$_REQUEST[date_report]'
-			WHERE c.id!='admin'						
-			GROUP BY c.id
-		";
-		$sqlDetil= "
+		/*$sqlDetil= "
 			SELECT a.id, a.name, e.name as departement, g.name as job ,b.date_report, c.listjob, c.describejob, c.duration
 			FROM employee as a, dailyreport as b, detilreport as c, workin as d, departement as e, group_jobtitle as f, jobtitle as g
 			WHERE a.id not in('admin')
@@ -234,9 +238,31 @@ class ReportController extends Controller
 			AND f.employee_id= a.id
 			AND g.id= f.jobtitle_id
 			ORDER BY d.departement_id, a.id
+		";*/
+		$sqlDetilOk = "
+		SELECT 
+		    b.id ,b.date_report, b.employee_id, a.name, e.name AS departement, g.name AS job
+		FROM
+		    employee AS a,
+		    dailyreport AS b,
+		    workin AS d,
+		    departement AS e,
+		    group_jobtitle AS f,
+		    jobtitle AS g
+		    
+		WHERE
+		    a.id NOT IN ('admin')
+		        AND a.id = b.employee_id
+		        AND b.date_report BETWEEN '$date_start' AND '$date_end'
+		        AND d.employee_id = a.id
+		        AND e.id = d.departement_id
+		        AND f.employee_id = a.id
+		        AND g.id = f.jobtitle_id
+		       
+		ORDER BY  e.id, b.employee_id, b.date_report
 		";
 		
-		$cmdDetil= $connect1->createCommand($sqlDetil);
+		$cmdDetil= $connect1->createCommand($sqlDetilOk);
 		$dataDetil= $cmdDetil->queryAll();	
 		
 		
@@ -244,18 +270,19 @@ class ReportController extends Controller
 		foreach ($dataDetil as $key=>$row)
 		{
 
-			$id= $row[id];
-			$name = $row[name]; 
-			$dep= $row[departement];
-			$job= $row[job];
-			$date_report= $row[date_report];
-			$listjob=$row[listjob];
-			$describejob=$row[describejob];
-			$duration=$row[duration];
+			$id= $row['employee_id'];
+			$name = $row['name']; 
+			$dep= $row['departement'];
+			$job= $row['job'];
+			$date_report= $row['date_report'];
+			//$listjob=$row['listjob'];
+			//$describejob=$row['describejob'];
+			//$duration=$row['duration'];
 			
 
 			$rows = array(				
-				$id, $name, $dep, $job, $date_report, $listjob, $describejob, $duration
+				$id, $name, $dep, $job, $date_report
+				//, $listjob, $describejob, $duration
 			);
 			$col = 'A'; //start from column
 			foreach($rows as $cell) {
@@ -266,11 +293,19 @@ class ReportController extends Controller
 		}
 		// Rename worksheet
 		$objPHPExcel->getActiveSheet()->setTitle('Daily Activities Report');
-		 
+		
+		$styleArray = array(
+	    'font'  => array(
+	        //'bold'  => true,
+	        'color' => array('rgb' => 'FF0000'),
+	        'size'  => 10,
+	        'name'  => 'Verdana'
+	    ));
+
+	    $objPHPExcel->getActiveSheet()->getStyle('A$1:E$1')->applyFromArray($styleArray);
 		 
 		// Set active sheet index to the first sheet, so Excel opens this as the first sheet
 		$objPHPExcel->setActiveSheetIndex(0);
-		 
 		 
 		// Redirect output to a clientâ€™s web browser (Excel5)
 		header('Content-Type: application/vnd.ms-excel');

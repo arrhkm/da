@@ -5981,3 +5981,571 @@ Stack trace:
 REQUEST_URI=/da/index.php?r=report/createreportall
 HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
 ---
+2017/04/26 03:41:58 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreport')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=report/createreport
+---
+2017/04/26 03:42:32 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreport')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=report/createreport
+---
+2017/04/26 03:42:46 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "CreateExcel". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('CreateExcel')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('CreateExcel')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/CreateEx...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/CreateExcel&date_report=2014-11-27
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report
+---
+2017/04/26 03:54:31 [error] [exception.ParseError] ParseError: syntax error, unexpected 'expression' (T_STRING), expecting ')' in /var/www/html/da/protected/controllers/ReportController.php:29
+Stack trace:
+#0 /var/www/html/da/framework/web/CWebApplication.php(276): CWebApplication->createController('createreportall...')
+#1 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#2 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/html/da/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 03:58:22 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 03:58:34 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 03:59:30 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+---
+2017/04/26 04:07:37 [error] [exception.ParseError] ParseError: syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /var/www/html/da/protected/controllers/ReportController.php:66
+Stack trace:
+#0 /var/www/html/da/framework/web/CWebApplication.php(276): CWebApplication->createController('rptall/')
+#1 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#2 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/html/da/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/rptall
+---
+2017/04/26 04:08:25 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function ReportController::createExcel(), 0 passed in /var/www/html/da/protected/controllers/ReportController.php on line 66 and exactly 2 expected in /var/www/html/da/protected/controllers/ReportController.php:73
+Stack trace:
+#0 /var/www/html/da/protected/controllers/ReportController.php(66): ReportController->createExcel()
+#1 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#2 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#11 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#12 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/da/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/rptall
+---
+2017/04/26 04:08:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND e.id = d.departement_id
+			AND f.employee_id= a.id
+			AND g.id= f.jobtitle_i' at line 10. The SQL statement executed was: 
+			SELECT a.id, a.name, e.name as departement, g.name as job ,b.date_report, c.listjob, c.describejob, c.duration
+			FROM employee as a, dailyreport as b, detilreport as c, workin as d, departement as e, group_jobtitle as f, jobtitle as g
+			WHERE a.id not in('admin')
+
+			AND b.employee_id= a.id
+			AND c.dailyreport_id= b.id
+			AND b.date_report between '2017-04-01' AND '2017-04-26'
+			AND a.id= d.employee_id
+			AND d.departement_id = 
+			AND e.id = d.departement_id
+			AND f.employee_id= a.id
+			AND g.id= f.jobtitle_id
+			ORDER BY a.id
+		.
+in /var/www/html/da/protected/controllers/ReportController.php (131)
+in /var/www/html/da/protected/controllers/ReportController.php (66)
+in /var/www/html/da/index.php (13)
+2017/04/26 04:08:58 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND e.id = d.departement_id
+			AND f.employee_id= a.id
+			AND g.id= f.jobtitle_i' at line 10. The SQL statement executed was: 
+			SELECT a.id, a.name, e.name as departement, g.name as job ,b.date_report, c.listjob, c.describejob, c.duration
+			FROM employee as a, dailyreport as b, detilreport as c, workin as d, departement as e, group_jobtitle as f, jobtitle as g
+			WHERE a.id not in('admin')
+
+			AND b.employee_id= a.id
+			AND c.dailyreport_id= b.id
+			AND b.date_report between '2017-04-01' AND '2017-04-26'
+			AND a.id= d.employee_id
+			AND d.departement_id = 
+			AND e.id = d.departement_id
+			AND f.employee_id= a.id
+			AND g.id= f.jobtitle_id
+			ORDER BY a.id
+		 in /var/www/html/da/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/da/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/html/da/protected/controllers/ReportController.php(131): CDbCommand->queryAll()
+#2 /var/www/html/da/protected/controllers/ReportController.php(66): ReportController->createExcel('2017-04-01', '2017-04-26')
+#3 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#4 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#13 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#14 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/da/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/rptall
+---
+2017/04/26 04:18:26 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "CreateExcel". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('CreateExcel')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('CreateExcel')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/CreateEx...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/CreateExcel&date_report=2014-11-27
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/rptall
+---
+2017/04/26 04:18:51 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/CreateExcel&date_report=2014-11-27
+---
+2017/04/26 04:18:58 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 04:19:03 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 04:19:09 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 04:19:11 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 04:24:43 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 04:25:01 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=Employee/admin
+---
+2017/04/26 04:25:59 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=Employee/admin
+---
+2017/04/26 04:26:25 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 04:32:49 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/views/report/rptall.php(20): CActiveForm->errorSummary(NULL)
+#2 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#3 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', NULL, true)
+#4 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', NULL, true)
+#5 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('rptall', NULL, true)
+#6 /var/www/html/da/protected/controllers/ReportController.php(73): CController->render('rptall')
+#7 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#8 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#17 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#18 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/html/da/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+---
+2017/04/26 04:33:13 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/views/report/rptall.php(20): CActiveForm->errorSummary(NULL)
+#2 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#3 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', NULL, true)
+#4 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', NULL, true)
+#5 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('rptall', NULL, true)
+#6 /var/www/html/da/protected/controllers/ReportController.php(74): CController->render('rptall')
+#7 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#8 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#17 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#18 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/html/da/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+---
+2017/04/26 04:33:15 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/views/report/rptall.php(20): CActiveForm->errorSummary(NULL)
+#2 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#3 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', NULL, true)
+#4 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', NULL, true)
+#5 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('rptall', NULL, true)
+#6 /var/www/html/da/protected/controllers/ReportController.php(74): CController->render('rptall')
+#7 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#8 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#17 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#18 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/html/da/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+---
+2017/04/26 04:33:19 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/views/report/rptall.php(20): CActiveForm->errorSummary(NULL)
+#2 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#3 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', NULL, true)
+#4 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', NULL, true)
+#5 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('rptall', NULL, true)
+#6 /var/www/html/da/protected/controllers/ReportController.php(74): CController->render('rptall')
+#7 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#8 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#17 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#18 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/html/da/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+---
+2017/04/26 04:35:32 [error] [exception.ParseError] ParseError: syntax error, unexpected '*' in /var/www/html/da/protected/controllers/ReportController.php:72
+Stack trace:
+#0 /var/www/html/da/framework/web/CWebApplication.php(276): CWebApplication->createController('rptall/')
+#1 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#2 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/html/da/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+---
+2017/04/26 04:41:31 [error] [exception.ParseError] ParseError: syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /var/www/html/da/protected/views/report/createreportall.php:3
+Stack trace:
+#0 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', Array, true)
+#1 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', Array, true)
+#2 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('createreportall', Array, true)
+#3 /var/www/html/da/protected/controllers/ReportController.php(69): CController->render('createreportall', Array)
+#4 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#5 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#14 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#15 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/da/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/rptall
+---
+2017/04/26 04:42:26 [error] [exception.ParseError] ParseError: syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /var/www/html/da/protected/views/report/createreportall.php:3
+Stack trace:
+#0 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', Array, true)
+#1 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', Array, true)
+#2 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('createreportall', Array, true)
+#3 /var/www/html/da/protected/controllers/ReportController.php(69): CController->render('createreportall', Array)
+#4 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionRptall()
+#5 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('rptall')
+#14 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/rptall')
+#15 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/da/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/da/index.php?r=report/rptall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/rptall
+---
+2017/04/26 09:22:38 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/rptall
+---
+2017/04/26 09:22:48 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "createreportall". in /var/www/html/da/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(270): CController->missingAction('createreportall')
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 09:39:43 [error] [exception.Error] Error: Call to undefined method PHPExcel_Style::appalyFromArray() in /var/www/html/da/protected/controllers/ReportController.php:305
+Stack trace:
+#0 /var/www/html/da/protected/controllers/ReportController.php(83): ReportController->createExcelAll('2017-04-01', '2017-04-26')
+#1 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionCreatereportall()
+#2 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#11 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#12 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/da/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 09:40:09 [error] [exception.Error] Error: Call to undefined method PHPExcel_Style::applayFromArray() in /var/www/html/da/protected/controllers/ReportController.php:305
+Stack trace:
+#0 /var/www/html/da/protected/controllers/ReportController.php(83): ReportController->createExcelAll('2017-04-01', '2017-04-26')
+#1 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionCreatereportall()
+#2 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#11 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#12 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/da/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 09:40:46 [error] [exception.Error] Error: Call to a member function getActiveSheet() on null in /var/www/html/da/protected/controllers/ReportController.php:305
+Stack trace:
+#0 /var/www/html/da/protected/controllers/ReportController.php(83): ReportController->createExcelAll('2017-04-01', '2017-04-26')
+#1 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionCreatereportall()
+#2 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#11 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#12 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/da/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 09:42:43 [error] [exception.Error] Error: Call to a member function getActiveSheet() on null in /var/www/html/da/protected/controllers/ReportController.php:305
+Stack trace:
+#0 /var/www/html/da/protected/controllers/ReportController.php(83): ReportController->createExcelAll('2017-04-01', '2017-04-26')
+#1 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionCreatereportall()
+#2 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#11 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#12 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/da/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/26 09:45:39 [error] [exception.PHPExcel_Exception] PHPExcel_Exception: Cell coordinate can not be zero-length string in /var/www/html/da/protected/extensions/PHPExcel/Classes/vendor/PHPExcel/Cell.php:555
+Stack trace:
+#0 /var/www/html/da/protected/extensions/PHPExcel/Classes/vendor/PHPExcel/Style.php(237): PHPExcel_Cell::coordinateFromString('')
+#1 /var/www/html/da/protected/controllers/ReportController.php(305): PHPExcel_Style->applyFromArray(Array)
+#2 /var/www/html/da/protected/controllers/ReportController.php(83): ReportController->createExcelAll('2017-04-01', '2017-04-26')
+#3 /var/www/html/da/framework/web/actions/CInlineAction.php(49): ReportController->actionCreatereportall()
+#4 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#13 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#14 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/da/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
