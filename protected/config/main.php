@@ -77,7 +77,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=dailyactivity',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'Lintech32#',
 			'charset' => 'utf8',
 		),
 		

@@ -103,13 +103,13 @@ class ReportController extends Controller
 		//$data = $this->loadModel($_REQUEST[id]);
 		$connect1 = Yii::app()->db;
 		
-		$sqlDetil2="
+		/*$sqlDetil2="
 			SELECT c.id, c.name, a.id as kd_report, a.date_report, SEC_TO_TIME(SUM(TIME_TO_SEC(duration))) as total_durasi
 			FROM dailyreport a JOIN detilreport b ON(b.dailyreport_id= a.id) 
 			RIGHT JOIN employee c ON(a.employee_id= c.id) AND a.date_report= '$_REQUEST[date_report]'
 			WHERE c.id!='admin'						
 			GROUP BY c.id
-		";
+		";*/
 		$sqlDetil= "
 			SELECT a.id, a.name, e.name as departement, g.name as job ,b.date_report, c.listjob, c.describejob, c.duration
 			FROM employee as a, dailyreport as b, detilreport as c, workin as d, departement as e, group_jobtitle as f, jobtitle as g

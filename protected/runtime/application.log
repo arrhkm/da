@@ -5186,3 +5186,798 @@ REQUEST_URI=/da_backup/index.php?r=User/setpassword&id=S16318
 in /media/hkm/data/htdocs/da_backup/protected/views/user/setpassword.php (33)
 in /media/hkm/data/htdocs/da_backup/protected/controllers/UserController.php (204)
 in /media/hkm/data/htdocs/da_backup/index.php (13)
+2017/03/27 07:51:04 [error] [php] Undefined variable: msg (/var/www/html/da/protected/controllers/UserController.php:185)
+Stack trace:
+#0 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/da/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#3 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/da/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#6 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/da/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /var/www/html/da/framework/web/CWebApplication.php(282): UserController->run()
+#10 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/da/index.php(13): CWebApplication->run()
+REQUEST_URI=/da/index.php?r=User/changepassword&id=S16318
+in /var/www/html/da/protected/controllers/UserController.php (185)
+in /var/www/html/da/index.php (13)
+2017/03/27 07:51:06 [error] [php] Undefined variable: msg (/var/www/html/da/protected/controllers/UserController.php:185)
+Stack trace:
+#0 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/da/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#3 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/da/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#6 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/da/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /var/www/html/da/framework/web/CWebApplication.php(282): UserController->run()
+#10 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/da/index.php(13): CWebApplication->run()
+REQUEST_URI=/da/index.php?r=User/changepassword&id=S09078
+in /var/www/html/da/protected/controllers/UserController.php (185)
+in /var/www/html/da/index.php (13)
+2017/03/27 07:51:15 [error] [php] Undefined variable: msg (/var/www/html/da/protected/controllers/UserController.php:185)
+Stack trace:
+#0 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/da/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#3 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/da/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#6 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/da/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /var/www/html/da/framework/web/CWebApplication.php(282): UserController->run()
+#10 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/da/index.php(13): CWebApplication->run()
+REQUEST_URI=/da/index.php?r=User/changepassword&id=S16318
+in /var/www/html/da/protected/controllers/UserController.php (185)
+in /var/www/html/da/index.php (13)
+2017/03/29 01:05:44 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/extensions/booster/widgets/TbActiveForm.php(173): CActiveForm->errorSummary(NULL, NULL, NULL, Array)
+#2 /var/www/html/da/protected/views/dailyreport/detilreport.php(43): TbActiveForm->errorSummary(NULL)
+#3 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#4 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', Array, true)
+#5 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', Array, true)
+#6 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('detilreport', Array, true)
+#7 /var/www/html/da/protected/controllers/DailyreportController.php(415): CController->render('detilreport', Array)
+#8 [internal function]: DailyreportController->actionUpdateDetil('93625', 'S16326-2017-03-...')
+#9 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#10 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#11 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('updatedetil')
+#20 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/upd...')
+#21 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/html/da/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/da/index.php?ajax=detil-grid&dailyreport_id=S16326-2017-03-06&id=93625&r=dailyreport%2Fupdatedetil&update=1
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/updatedetil&id=93625&dailyreport_id=S16326-2017-03-06&update=1
+---
+2017/03/29 01:05:46 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/extensions/booster/widgets/TbActiveForm.php(173): CActiveForm->errorSummary(NULL, NULL, NULL, Array)
+#2 /var/www/html/da/protected/views/dailyreport/detilreport.php(43): TbActiveForm->errorSummary(NULL)
+#3 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#4 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', Array, true)
+#5 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', Array, true)
+#6 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('detilreport', Array, true)
+#7 /var/www/html/da/protected/controllers/DailyreportController.php(415): CController->render('detilreport', Array)
+#8 [internal function]: DailyreportController->actionUpdateDetil('93625', 'S16326-2017-03-...')
+#9 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#10 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#11 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('updatedetil')
+#20 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/upd...')
+#21 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/html/da/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/updatedetil&id=93625&dailyreport_id=S16326-2017-03-06&update=1
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/viewstaff&id=S16326-2017-03-06
+---
+2017/03/29 01:05:52 [error] [php] Creating default object from empty value (/var/www/html/da/protected/controllers/DailyreportController.php:402)
+Stack trace:
+#0 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/da/framework/web/filters/CFilterChain.php(133): DailyreportController->runAction()
+#3 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/da/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): DailyreportController->filterAccessControl()
+#6 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/da/framework/web/CController.php(265): DailyreportController->runActionWithFilters()
+#9 /var/www/html/da/framework/web/CWebApplication.php(282): DailyreportController->run()
+#10 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/da/index.php(13): CWebApplication->run()
+REQUEST_URI=/da/index.php?r=dailyreport/updatedetil&id=93625&dailyreport_id=S16326-2017-03-06&update=1
+in /var/www/html/da/protected/controllers/DailyreportController.php (402)
+in /var/www/html/da/index.php (13)
+2017/03/29 01:05:56 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/extensions/booster/widgets/TbActiveForm.php(173): CActiveForm->errorSummary(NULL, NULL, NULL, Array)
+#2 /var/www/html/da/protected/views/dailyreport/detilreport.php(43): TbActiveForm->errorSummary(NULL)
+#3 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#4 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', Array, true)
+#5 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', Array, true)
+#6 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('detilreport', Array, true)
+#7 /var/www/html/da/protected/controllers/DailyreportController.php(415): CController->render('detilreport', Array)
+#8 [internal function]: DailyreportController->actionUpdateDetil('93625', 'S16326-2017-03-...')
+#9 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#10 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#11 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('updatedetil')
+#20 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/upd...')
+#21 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/html/da/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/updatedetil&id=93625&dailyreport_id=S16326-2017-03-06&update=1
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/viewstaff&id=S16326-2017-03-06
+---
+2017/03/29 07:54:49 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=site/index
+---
+2017/03/29 07:54:52 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/03/29 07:54:58 [error] [exception.CHttpException.403] CHttpException: You are not allowed to access this page. in /var/www/html/da/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=gii
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/03/29 07:55:00 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/03/29 07:55:04 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('Employee/admin')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=Employee/admin
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/03/29 07:56:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S12194-2017-03-28'.
+in /var/www/html/da/protected/controllers/DailyreportController.php (206)
+in /var/www/html/da/index.php (13)
+2017/03/29 07:56:13 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S12194-2017-03-28' in /var/www/html/da/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/da/framework/db/ar/CActiveRecord.php(1802): CDbCommand->execute()
+#1 /var/www/html/da/framework/db/ar/CActiveRecord.php(1222): CActiveRecord->deleteByPk('S12194-2017-03-...')
+#2 /var/www/html/da/protected/controllers/DailyreportController.php(206): CActiveRecord->delete()
+#3 [internal function]: DailyreportController->actionDelete('S12194-2017-03-...')
+#4 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#5 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#6 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/da/framework/web/CController.php(1116): CFilterChain->run()
+#9 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('delete')
+#18 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/del...')
+#19 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/da/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/delete&id=S12194-2017-03-28
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/viewstaff&id=S12194-2017-03-28
+---
+2017/04/04 01:06:51 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=site/index
+---
+2017/04/04 01:06:58 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/04/04 01:08:05 [error] [exception.CHttpException.403] CHttpException: You are not allowed to access this page. in /var/www/html/da/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=gii
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/04/04 01:08:06 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/04/04 01:09:01 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=site/index
+---
+2017/04/04 01:09:08 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/04/04 01:09:16 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('indexstaff')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/ind...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/indexstaff
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=site/
+---
+2017/04/04 01:09:20 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('changepassword')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('User/changepass...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=User/changepassword&id=S06030
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/indexstaff
+---
+2017/04/04 01:09:25 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('Employee/admin')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=Employee/admin
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=User/changepassword&id=S06030
+---
+2017/04/04 01:09:33 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('createreportall')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=site/
+---
+2017/04/04 01:09:36 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/adm...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/admin
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/04 01:09:38 [error] [exception.CHttpException.403] CHttpException: You are not allowed to access this page. in /var/www/html/da/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/da/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/da/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/da/index.php?r=gii
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/admin
+---
+2017/04/04 01:09:41 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/adm...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/admin
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
+2017/04/12 06:35:55 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x91\x8E\x09C...' for column 'describejob' at row 1. The SQL statement executed was: INSERT INTO `detilreport` (`dailyreport_id`, `listjob`, `describejob`, `duration`, `id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/da/protected/controllers/DailyreportController.php (369)
+in /var/www/html/da/index.php (13)
+2017/04/12 06:35:55 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x91\x8E\x09C...' for column 'describejob' at row 1. The SQL statement executed was: INSERT INTO `detilreport` (`dailyreport_id`, `listjob`, `describejob`, `duration`, `id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4) in /var/www/html/da/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/da/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/da/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/da/protected/controllers/DailyreportController.php(369): CActiveRecord->save()
+#3 /var/www/html/da/framework/web/actions/CInlineAction.php(49): DailyreportController->actionDetilreport()
+#4 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('detilreport')
+#13 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/det...')
+#14 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/da/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/detilreport&dailyreport_id=S13219-2017-04-10
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/detilreport&dailyreport_id=S13219-2017-04-10
+---
+2017/04/12 06:36:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x91\x8E\x09C...' for column 'describejob' at row 1. The SQL statement executed was: INSERT INTO `detilreport` (`dailyreport_id`, `listjob`, `describejob`, `duration`, `id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/da/protected/controllers/DailyreportController.php (369)
+in /var/www/html/da/index.php (13)
+2017/04/12 06:36:07 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x91\x8E\x09C...' for column 'describejob' at row 1. The SQL statement executed was: INSERT INTO `detilreport` (`dailyreport_id`, `listjob`, `describejob`, `duration`, `id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4) in /var/www/html/da/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/da/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/da/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/da/protected/controllers/DailyreportController.php(369): CActiveRecord->save()
+#3 /var/www/html/da/framework/web/actions/CInlineAction.php(49): DailyreportController->actionDetilreport()
+#4 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('detilreport')
+#13 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/det...')
+#14 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/da/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/detilreport&dailyreport_id=S13219-2017-04-10
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/detilreport&dailyreport_id=S13219-2017-04-10
+---
+2017/04/12 06:36:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x91\x8E\x09C...' for column 'describejob' at row 1. The SQL statement executed was: INSERT INTO `detilreport` (`dailyreport_id`, `listjob`, `describejob`, `duration`, `id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/html/da/protected/controllers/DailyreportController.php (369)
+in /var/www/html/da/index.php (13)
+2017/04/12 06:36:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x91\x8E\x09C...' for column 'describejob' at row 1. The SQL statement executed was: INSERT INTO `detilreport` (`dailyreport_id`, `listjob`, `describejob`, `duration`, `id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4) in /var/www/html/da/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/da/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/html/da/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/html/da/protected/controllers/DailyreportController.php(369): CActiveRecord->save()
+#3 /var/www/html/da/framework/web/actions/CInlineAction.php(49): DailyreportController->actionDetilreport()
+#4 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('detilreport')
+#13 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/det...')
+#14 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/html/da/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/detilreport&dailyreport_id=S13219-2017-04-10
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/detilreport&dailyreport_id=S13219-2017-04-10
+---
+2017/04/18 02:54:33 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/createstaff
+---
+2017/04/18 03:24:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S14265-2017-04-09'.
+in /var/www/html/da/protected/controllers/DailyreportController.php (206)
+in /var/www/html/da/index.php (13)
+2017/04/18 03:24:23 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S14265-2017-04-09' in /var/www/html/da/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/da/framework/db/ar/CActiveRecord.php(1802): CDbCommand->execute()
+#1 /var/www/html/da/framework/db/ar/CActiveRecord.php(1222): CActiveRecord->deleteByPk('S14265-2017-04-...')
+#2 /var/www/html/da/protected/controllers/DailyreportController.php(206): CActiveRecord->delete()
+#3 [internal function]: DailyreportController->actionDelete('S14265-2017-04-...')
+#4 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#5 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#6 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/da/framework/web/CController.php(1116): CFilterChain->run()
+#9 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('delete')
+#18 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/del...')
+#19 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/da/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/delete&id=S14265-2017-04-09
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/viewstaff&id=S14265-2017-04-09
+---
+2017/04/19 07:03:29 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/extensions/booster/widgets/TbActiveForm.php(173): CActiveForm->errorSummary(NULL, NULL, NULL, Array)
+#2 /var/www/html/da/protected/views/dailyreport/detilreport.php(43): TbActiveForm->errorSummary(NULL)
+#3 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#4 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', Array, true)
+#5 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', Array, true)
+#6 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('detilreport', Array, true)
+#7 /var/www/html/da/protected/controllers/DailyreportController.php(415): CController->render('detilreport', Array)
+#8 [internal function]: DailyreportController->actionUpdateDetil('94823', 'S11134-2017-04-...')
+#9 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#10 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#11 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('updatedetil')
+#20 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/upd...')
+#21 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/html/da/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/da/index.php?ajax=detil-grid&dailyreport_id=S11134-2017-04-13&id=94823&r=dailyreport%2Fupdatedetil&update=1
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/updatedetil&id=94823&dailyreport_id=S11134-2017-04-13&update=1
+---
+2017/04/19 07:03:33 [error] [exception.Error] Error: Call to a member function getErrors() on null in /var/www/html/da/framework/web/helpers/CHtml.php:2002
+Stack trace:
+#0 /var/www/html/da/framework/web/widgets/CActiveForm.php(547): CHtml::errorSummary(Array, NULL, NULL, Array)
+#1 /var/www/html/da/protected/extensions/booster/widgets/TbActiveForm.php(173): CActiveForm->errorSummary(NULL, NULL, NULL, Array)
+#2 /var/www/html/da/protected/views/dailyreport/detilreport.php(43): TbActiveForm->errorSummary(NULL)
+#3 /var/www/html/da/framework/web/CBaseController.php(126): require('/var/www/html/d...')
+#4 /var/www/html/da/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/d...', Array, true)
+#5 /var/www/html/da/framework/web/CController.php(869): CBaseController->renderFile('/var/www/html/d...', Array, true)
+#6 /var/www/html/da/framework/web/CController.php(782): CController->renderPartial('detilreport', Array, true)
+#7 /var/www/html/da/protected/controllers/DailyreportController.php(415): CController->render('detilreport', Array)
+#8 [internal function]: DailyreportController->actionUpdateDetil('94823', 'S11134-2017-04-...')
+#9 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#10 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#11 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('updatedetil')
+#20 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/upd...')
+#21 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/html/da/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/da/index.php?ajax=detil-grid&dailyreport_id=S11134-2017-04-13&id=94823&r=dailyreport%2Fupdatedetil&update=1
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/updatedetil&id=94823&dailyreport_id=S11134-2017-04-13&update=1
+---
+2017/04/19 10:01:51 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/vie...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/view&id=S16309-2017-04-19
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/updatestaff&id=S16309-2017-04-19
+---
+2017/04/19 10:03:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S16309-2017-04-19'.
+in /var/www/html/da/protected/controllers/DailyreportController.php (206)
+in /var/www/html/da/index.php (13)
+2017/04/19 10:03:15 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S16309-2017-04-19' in /var/www/html/da/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/da/framework/db/ar/CActiveRecord.php(1802): CDbCommand->execute()
+#1 /var/www/html/da/framework/db/ar/CActiveRecord.php(1222): CActiveRecord->deleteByPk('S16309-2017-04-...')
+#2 /var/www/html/da/protected/controllers/DailyreportController.php(206): CActiveRecord->delete()
+#3 [internal function]: DailyreportController->actionDelete('S16309-2017-04-...')
+#4 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#5 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#6 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/da/framework/web/CController.php(1116): CFilterChain->run()
+#9 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('delete')
+#18 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/del...')
+#19 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/da/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/da/index.php?ajax=dailyreport-grid&id=S16309-2017-04-19&r=dailyreport%2Fdelete
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/adminstaff
+---
+2017/04/19 10:03:22 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/vie...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/view&id=S16309-2017-04-19
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/updatestaff&id=S16309-2017-04-19
+---
+2017/04/20 06:47:34 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/vie...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/view&id=S16318-2017-04-19
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/updatestaff&id=S16318-2017-04-19
+---
+2017/04/20 07:57:08 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/html/da/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/html/da/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(EWebUser), 'You are not aut...')
+#1 /var/www/html/da/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/vie...')
+#9 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/da/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/view&id=S15292-2017-04-29
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/updatestaff&id=S15292-2017-04-29
+---
+2017/04/26 01:59:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S08041-2017-04-13'.
+in /var/www/html/da/protected/controllers/DailyreportController.php (206)
+in /var/www/html/da/index.php (13)
+2017/04/26 01:59:04 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dailyactivity`.`detilreport`, CONSTRAINT `fk_detilreport_dailyreport1` FOREIGN KEY (`dailyreport_id`) REFERENCES `dailyreport` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `dailyreport` WHERE `dailyreport`.`id`='S08041-2017-04-13' in /var/www/html/da/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/da/framework/db/ar/CActiveRecord.php(1802): CDbCommand->execute()
+#1 /var/www/html/da/framework/db/ar/CActiveRecord.php(1222): CActiveRecord->deleteByPk('S08041-2017-04-...')
+#2 /var/www/html/da/protected/controllers/DailyreportController.php(206): CActiveRecord->delete()
+#3 [internal function]: DailyreportController->actionDelete('S08041-2017-04-...')
+#4 /var/www/html/da/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(DailyreportController), Array)
+#5 /var/www/html/da/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(DailyreportController), Object(ReflectionMethod), Array)
+#6 /var/www/html/da/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/da/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/da/framework/web/CController.php(1116): CFilterChain->run()
+#9 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/da/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/html/da/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/html/da/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/html/da/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/html/da/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/html/da/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/html/da/framework/web/CWebApplication.php(282): CController->run('delete')
+#18 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('dailyreport/del...')
+#19 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/html/da/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/da/index.php?r=dailyreport/delete&id=S08041-2017-04-13
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=dailyreport/viewstaff&id=S08041-2017-04-13
+---
+2017/04/26 02:55:31 [error] [exception.ParseError] ParseError: syntax error, unexpected 'public' (T_PUBLIC) in /var/www/html/da/protected/controllers/ReportController.php:199
+Stack trace:
+#0 /var/www/html/da/framework/web/CWebApplication.php(276): CWebApplication->createController('createreportall...')
+#1 /var/www/html/da/framework/web/CWebApplication.php(141): CWebApplication->runController('report/createre...')
+#2 /var/www/html/da/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/html/da/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/da/index.php?r=report/createreportall
+HTTP_REFERER=http://192.168.100.111/da/index.php?r=report/createreportall
+---
